@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial
+scale=1.0"> 
+<title>Dynamic To-Do App</title> 
+<link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+<div class="container"> 
+<h1>Dynamic To-Do App</h1> 
+<!-- Notifications --> 
+<div id="toast" class="hidden"></div> 
+<!-- Add Task Form --> 
+<form id="taskForm"> 
+<input type="text" id="taskTitle" placeholder="Task Title" required> 
+<textarea id="taskDescription" placeholder="Task 
+Description"></textarea> 
+<select id="taskPriority"> 
+<option value="Low">Low</option> 
+<option value="Medium">Medium</option> 
+<option value="High">High</option> 
+</select> 
+<button type="submit">Add Task</button> 
+</form> 
+<!-- Search and Filters --> 
+<div class="filters"> 
+<input type="text" id="searchBox" placeholder="Search 
+tasks..."> 
+<button onclick="filterAll()">All</button> 
+<button onclick="filterCompleted()">Completed</button> 
+<button onclick="filterPending()">Pending</button> 
+</div> 
+<!-- Task List --> 
+<div id="taskList"></div> 
+</div> 
+<script src="app.js"></script> 
+</body> 
+</html>

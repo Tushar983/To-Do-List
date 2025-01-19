@@ -1,0 +1,109 @@
+/* General Styling */ 
+body { 
+    font-family: 'Arial', sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, 
+    #fbc2eb 100%); 
+    color: #333; 
+    min-height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    } 
+    .container { 
+    max-width: 600px; 
+    width: 90%; 
+    background: #ffffff; 
+    padding: 20px; 
+    border-radius: 16px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+    text-align: center; 
+    overflow: hidden; 
+    }
+
+    h1 { 
+    font-size: 2.5rem; 
+    color: #ff6b6b; 
+    margin-bottom: 20px; 
+    } 
+    form, .filters { 
+    margin-bottom: 20px; 
+    } 
+    /* Inputs and Buttons */ 
+    input, textarea, select, button { 
+    width: 100%; 
+    padding: 12px; 
+    margin: 10px 0; 
+    border-radius: 8px; 
+    border: 2px solid #ddd; 
+    font-size: 1rem; 
+    outline: none; 
+    } 
+    input:focus, textarea:focus, select:focus { 
+    border-color: #ff6b6b; 
+    box-shadow: 0 0 6px rgba(255, 107, 107, 0.5); 
+    } 
+    button { 
+    background: linear-gradient(135deg, #ff6b6b, #f06595); 
+    color: #ffffff; 
+    font-size: 1.1rem; 
+    border: none; 
+    cursor: pointer; 
+    transition: background 0.3s ease; 
+    } 
+    button:hover { 
+    background: linear-gradient(135deg, #fa5252, #e64980); 
+    } 
+    /* Task Cards */ 
+    #taskList > div { 
+    background: linear-gradient(135deg, #f8f9fa, #ffffff); 
+    border: 2px solid #ddd; 
+    padding: 15px; 
+    margin: 10px 0; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in
+    out; 
+    } 
+    #taskList > div:hover { 
+    transform: scale(1.03); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+    } 
+    .completed { 
+    text-decoration: line-through; 
+    color: #aaa; 
+    }
+    .high { 
+    border-left: 8px solid #ff6b6b; 
+    } 
+    .medium { 
+    border-left: 8px solid #f59f00; 
+    } 
+    .low { 
+    border-left: 8px solid #51cf66; 
+    } 
+    /* Search and Filters */ 
+    .filters input { 
+    width: calc(100% - 10px); 
+    } 
+    .filters button { 
+    margin-top: 10px; 
+    } 
+    /* Toast Notifications */ 
+    #toast { 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    background: #333; 
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 8px; 
+    display: inline-block;
+    opacity: 0; 
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+    } 
+    #toast.show { 
+    opacity: 1; 
+    transform: translateY(-10px); 
+    }
